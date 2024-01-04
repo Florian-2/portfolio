@@ -10,7 +10,10 @@ export const Card = forwardRef<HTMLDivElement, Props>(function Card({ children, 
 	return (
 		<div
 			ref={ref}
-			className={cn("p-6 text-white bg-card rounded-lg border transition-colors hover:border-red-500", className)}
+			className={cn(
+				"p-4 sm:p-6 text-white bg-card rounded-lg border transition-colors hover:border-red-500",
+				className
+			)}
 		>
 			{children}
 		</div>

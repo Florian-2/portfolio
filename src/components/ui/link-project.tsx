@@ -7,40 +7,54 @@ import { m, useAnimation, Variants } from "framer-motion";
 import { IconExternalLink } from "../icons/external-link";
 
 type Props = {
-	href: string;
-	src: string;
-	title: string;
+	project: Project;
 };
 
-export function LinkProject({ href, src, title }: Props) {
+export function LinkProject({ project }: Props) {
 	const [isHovered, setIsHovered] = useState(false);
 
 	const controls = useAnimation();
 
-	const boxImageVariants: Variants = {
-		hidden: { opacity: 0, y: -30 },
+	const fadeVariants: Variants = {
+		hidden: { opacity: 0, y: 30 },
 		visible: { opacity: 1, y: 0 },
 	};
 
 	return (
-		<div className="relative h-full flex items-center">
+		<m.div
+			className="relative"
+			onHoverStart={() => {
+				setIsHovered(true);
+				controls.start("visible");
+			}}
+			onHoverEnd={() => {
+				setIsHovered(false);
+				controls.start("hidden");
+			}}
+		>
 			<m.div
-				className="absolute z-10 right-0 rounded-2xl overflow-hidden pointer-events-none"
+				className="absolute z-10 rounded-lg pointer-events-none min-w-[270px] overflow-hidden"
 				initial="hidden"
 				animate={isHovered ? "visible" : "hidden"}
-				variants={boxImageVariants}
+				variants={fadeVariants}
+				style={{
+					bottom: "110%",
+					left: "50%",
+					translateX: "-50%",
+				}}
 			>
 				<Image
-					src={src}
-					alt={title}
-					width={250}
+					src={project.src}
+					alt={project.title}
+					width={270}
 					height={200}
+					aria-hidden={isHovered}
 				/>
 			</m.div>
 
 			<Link
-				href={href}
-				className="w-full h-full flex justify-between items-center hover:underline"
+				href={project.href}
+				className="h-full flex flex-col justify-between gap-4 p-4 border rounded-lg transition-colors hover:bg-[#1f1f1f] overflow-hidden"
 				target="_blank"
 				onMouseEnter={() => {
 					setIsHovered(true);
@@ -51,9 +65,20 @@ export function LinkProject({ href, src, title }: Props) {
 					controls.start("hidden");
 				}}
 			>
-				{title}
-				<IconExternalLink />
+				<span className="font-medium">{project.title}</span>
+
+				<div className="text-sm flex justify-between items-center">
+					{project.languages.join(" • ")}
+
+					<m.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={isHovered ? "visible" : "hidden"}
+						variants={fadeVariants}
+					>
+						<IconExternalLink />
+					</m.div>
+				</div>
 			</Link>
-		</div>
+		</m.div>
 	);
 }

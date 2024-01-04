@@ -6,9 +6,9 @@ const Element = forwardRef<HTMLDivElement>(function AboutMe(_props, ref) {
 	return (
 		<Card
 			ref={ref}
-			className="min-h-full col-span-1 md:col-span-1 md:row-span-7"
+			className="col-span-1 lg:row-span-6"
 		>
-			<div className="h-full flex flex-col justify-between gap-5 md:gap-2 ">
+			<div className="h-full flex flex-col justify-between gap-5  ">
 				<CardTitle>À propos de moi</CardTitle>
 
 				<p className="text-md whitespace-pre-line ">

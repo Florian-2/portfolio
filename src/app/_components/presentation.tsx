@@ -11,7 +11,7 @@ const Element = forwardRef<HTMLDivElement>(function Presentation(_props, ref) {
 	return (
 		<Card
 			ref={ref}
-			className="overflow-hidden border align-start flex gap-3 relative transform col-span-1 md:col-span-3 md:row-span-4"
+			className=" overflow-hidden border align-start flex gap-3 relative transform col-span-1 lg:col-span-3 lg:row-span-3"
 		>
 			<div className="flex flex-col justify-between gap-4 relative z-10">
 				<div className="space-y-3">
@@ -20,8 +20,8 @@ const Element = forwardRef<HTMLDivElement>(function Presentation(_props, ref) {
 					</CardTitle>
 
 					<p className="text-lg md:text-xl">
-						Je suis <b className="font-bold">Florian Sicilia</b>, développeur front-end. Je porte un vif
-						intérêt pour le design et l'expérience utilisateur, m'appliquant à concevoir des applications
+						Je suis <b className="font-bold">Florian Sicilia</b>, développeur front-end. Portant un vif
+						intérêt pour le design et l'expérience utilisateur, je m'applique à concevoir des applications
 						web élégantes et agréables à utiliser.
 					</p>
 				</div>

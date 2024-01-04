@@ -26,6 +26,9 @@ const config: Config = {
 			animation: {
 				deformation: "deformation 4s ease-in-out alternate infinite",
 			},
+			gridTemplateColumns: {
+				auto: "repeat(auto-fit, minmax(300px, 1fr))",
+			},
 		},
 	},
 	plugins: [],
