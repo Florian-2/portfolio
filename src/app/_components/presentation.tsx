@@ -4,15 +4,10 @@ import { Card, CardTitle, ContactLink } from "@/components/ui";
 import Image from "next/image";
 import Memoji from "@public/MyMemoji.webp";
 import { IconMail } from "@/components/icons/mail";
-import { forwardRef } from "react";
-import { m } from "framer-motion";
 
-const Element = forwardRef<HTMLDivElement>(function Presentation(_props, ref) {
+export function Presentation() {
 	return (
-		<Card
-			ref={ref}
-			className=" overflow-hidden border align-start flex gap-3 relative transform col-span-1 lg:col-span-3 lg:row-span-3"
-		>
+		<Card className="overflow-hidden border align-start flex gap-3 relative transform col-span-1 lg:col-span-3 lg:row-span-3">
 			<div className="flex flex-col justify-between gap-4 relative z-10">
 				<div className="space-y-3">
 					<CardTitle>
@@ -58,11 +53,8 @@ const Element = forwardRef<HTMLDivElement>(function Presentation(_props, ref) {
 					height={200}
 					priority={true}
 					draggable={false}
-					className=""
 				/>
 			</div>
 		</Card>
 	);
-});
-
-export const Presentation = m(Element);
+}

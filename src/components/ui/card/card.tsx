@@ -1,21 +1,31 @@
+"use client";
+
 import { cn } from "@/utils/utils";
-import { ReactNode, forwardRef } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type Props = {
 	children: ReactNode;
 	className?: string;
 };
 
-export const Card = forwardRef<HTMLDivElement, Props>(function Card({ children, className }: Props, ref) {
+export function Card({ children, className }: Props) {
+	const [isMounted, setIsMounted] = useState(false);
+
+	useEffect(() => {
+		if (!isMounted) {
+			setIsMounted(true);
+		}
+	}, [isMounted]);
+
 	return (
 		<div
-			ref={ref}
 			className={cn(
-				"p-4 sm:p-6 text-white bg-card rounded-lg border transition-colors hover:border-red-500",
-				className
+				"p-4 sm:p-6 text-white bg-card rounded-lg border transition-all hover:border-red-500 opacity-0 translate-y-72 duration-300",
+				className,
+				isMounted && "opacity-100 translate-y-0"
 			)}
 		>
 			{children}
 		</div>
 	);
-});
+}

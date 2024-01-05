@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { FramerMotion } from "./_components/framer-motion";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			className="selection:bg-red-500"
 		>
 			<body className={`${inter.className} flex justify-center items-center min-h-screen bg-background`}>
-				<FramerMotion>{children}</FramerMotion>
+				{children}
 			</body>
 		</html>
 	);

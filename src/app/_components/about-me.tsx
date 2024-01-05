@@ -1,13 +1,8 @@
 import { Card, CardTitle } from "@/components/ui";
-import { m } from "framer-motion";
-import { forwardRef } from "react";
 
-const Element = forwardRef<HTMLDivElement>(function AboutMe(_props, ref) {
+export function AboutMe() {
 	return (
-		<Card
-			ref={ref}
-			className="col-span-1 lg:row-span-6"
-		>
+		<Card className="col-span-1 lg:row-span-6 delay-100">
 			<div className="h-full flex flex-col justify-between gap-5  ">
 				<CardTitle>À propos de moi</CardTitle>
 
@@ -35,6 +30,4 @@ const Element = forwardRef<HTMLDivElement>(function AboutMe(_props, ref) {
 			</div>
 		</Card>
 	);
-});
-
-export const AboutMe = m(Element);
+}
