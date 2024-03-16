@@ -19,7 +19,7 @@ const projects: Project[] = [
 	{
 		id: 3,
 		title: "Movie+",
-		href: "#",
+		href: "https://youtu.be/BfoLFRWrkb8",
 		src: "/movie.webp",
 		languages: ["Next.js", "TypeScript"],
 	},
