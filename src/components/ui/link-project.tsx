@@ -42,7 +42,7 @@ export function LinkProject({ project }: Props) {
 				<span className="font-medium">{project.title}</span>
 
 				<div className="text-sm flex justify-between items-center">
-					{project.languages.join(" • ")}
+					<span className="truncate">{project.languages.join(" • ")}</span>
 
 					<div
 						className={cn(

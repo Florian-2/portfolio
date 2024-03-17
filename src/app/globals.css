@@ -8,14 +8,16 @@
 	--border: 240, 3.7%, 15.9%;
 }
 
-* {
-	@apply border-border;
-}
+@layer base {
+	* {
+		@apply border-border;
+	}
 
-body {
-	@apply bg-background;
-}
+	body {
+		@apply bg-background;
+	}
 
-p {
-	font-weight: 300;
+	p {
+		font-weight: 300;
+	}
 }
