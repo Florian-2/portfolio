@@ -10,19 +10,17 @@ export function AboutMe() {
 
 				<p className="text-md whitespace-pre-line ">
 					Passionné par l'informatique et plus particulièrement par le développement, j'ai commencé en
-					autodidacte avant de suivre une formation de développeur React d'une durée d'un an et demi.{"\n"} À
-					terme, mon objectif est de devenir développeur full-stack .NET / React.
+					autodidacte avant de suivre une formation de développeur React d'une durée d'un an et demi.
+					Aujourd'hui, je continue d'enrichir mes compétences pour devenir un meilleur développeur !
 				</p>
 
 				<div className="space-y-2">
 					<p className="font-normal truncate">Mes outils de prédilection:</p>
 
 					<ul className="list-disc list-inside font-normal">
-						<li>TypeScript</li>
-						<li>React</li>
-						<li>Next.js</li>
-						<li>GraphQL</li>
-						<li>Node</li>
+						{skills.map((skill) => (
+							<li key={skill}>{skill}</li>
+						))}
 					</ul>
 				</div>
 
