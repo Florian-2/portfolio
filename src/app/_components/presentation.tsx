@@ -1,9 +1,10 @@
 import { IconGithub } from "@/components/icons/github";
 import { IconLinkedin } from "@/components/icons/linkedin";
-import { Card, CardTitle, ContactLink } from "@/components/ui";
+import { Card, CardTitle, Link } from "@/components/ui";
 import Image from "next/image";
 import Memoji from "@public/MyMemoji.webp";
 import { IconMail } from "@/components/icons/mail";
+import { IconFile } from "@/components/icons/file";
 
 export function Presentation() {
 	return (
@@ -22,26 +23,33 @@ export function Presentation() {
 				</div>
 
 				<div className="flex gap-2">
-					<ContactLink
+					<Link
 						href="https://github.com/Florian-2"
 						title="Profil Github"
 					>
-						<IconGithub width={25} />
-					</ContactLink>
+						<IconGithub />
+					</Link>
 
-					<ContactLink
+					<Link
 						href="https://www.linkedin.com/in/florian-sicilia-4106b31ba/"
 						title="Profil Linkedin"
 					>
-						<IconLinkedin width={25} />
-					</ContactLink>
+						<IconLinkedin />
+					</Link>
 
-					<ContactLink
+					<Link
 						href="mailto:sicilia.florian02@gmail.com"
 						title="Contactez-moi par mail !"
 					>
-						<IconMail width={25} />
-					</ContactLink>
+						<IconMail />
+					</Link>
+
+					<Link
+						href="https://drive.proton.me/urls/P6P31GDXXM#C3FMoV01eVLM"
+						title="Mon CV"
+					>
+						<IconFile />
+					</Link>
 				</div>
 			</div>
 

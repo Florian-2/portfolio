@@ -2,7 +2,7 @@ type Props = {
 	width?: number;
 };
 
-export function IconExternalLink({ width = 25 }: Props) {
+export function IconFile({ width = 25 }: Props) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -14,14 +14,8 @@ export function IconExternalLink({ width = 25 }: Props) {
 			strokeLinecap="round"
 			strokeLinejoin="round"
 		>
-			<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-			<polyline points="15 3 21 3 21 9" />
-			<line
-				x1="10"
-				x2="21"
-				y1="14"
-				y2="3"
-			/>
+			<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+			<path d="M14 2v4a2 2 0 0 0 2 2h4" />
 		</svg>
 	);
 }

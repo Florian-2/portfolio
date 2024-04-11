@@ -2,7 +2,7 @@ type Props = {
 	width?: number;
 };
 
-export function IconLinkedin({ width = 20 }: Props) {
+export function IconLinkedin({ width = 25 }: Props) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
