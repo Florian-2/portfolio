@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IconExternalLink } from "../icons/external-link";
 import { cn } from "@/utils/utils";
+import { Project } from "@/interfaces/project";
 
 type Props = {
 	project: Project;
