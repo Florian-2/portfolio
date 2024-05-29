@@ -17,8 +17,8 @@ export function Presentation() {
 
 					<p className="text-lg md:text-xl">
 						Je suis <b className="font-bold">Florian Sicilia</b>, développeur front-end. Portant un vif
-						intérêt pour le design et l'expérience utilisateur, je m'applique à concevoir des applications
-						web élégantes et agréables à utiliser.
+						intérêt pour l'expérience utilisateur et l'accessibilité, je m'applique à concevoir des
+						applications web élégantes, fonctionnelles et agréables d'utilisation.
 					</p>
 				</div>
 
