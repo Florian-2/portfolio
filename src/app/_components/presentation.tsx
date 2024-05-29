@@ -45,7 +45,7 @@ export function Presentation() {
 					</Link>
 
 					<Link
-						href="https://drive.proton.me/urls/P6P31GDXXM#C3FMoV01eVLM"
+						href="https://link.storjshare.io/s/jxa5zy6ea3olh67f64tgnrrw6gaq/cv-florian/CV.pdf"
 						title="Mon CV"
 					>
 						<IconFile />
