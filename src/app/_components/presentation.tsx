@@ -53,7 +53,7 @@ export function Presentation() {
 				</div>
 			</div>
 
-			<div className="flex justify-end items-end flex-shrink-0 absolute bottom-0 right-[-30px] -z-1 opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto ">
+			<div className="flex justify-end items-end shrink-0 absolute bottom-0 right-[-30px] -z-1 opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto ">
 				<Image
 					src={Memoji}
 					alt="Memoji de Florian"

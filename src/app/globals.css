@@ -1,23 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-	--background: 0, 0%, 7%;
-	--card: 0, 0%, 9%;
-	--border: 240, 3.7%, 15.9%;
+@theme {
+  --color-background: hsl(var(--background));
+  --color-border: hsl(var(--border));
+  --color-card: hsl(var(--card));
+
+  --text-md: 0.938rem;
+
+  --animate-deformation: deformation 4s ease-in-out alternate infinite;
+
+  --grid-template-columns-auto: repeat(auto-fit, minmax(300px, 1fr));
+
+  @keyframes deformation {
+    0% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
 
-	body {
-		@apply bg-background;
-	}
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+    @apply border-border;
+  }
 
-	p {
-		font-weight: 300;
-	}
+  body {
+    @apply bg-background;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
+
+@layer utilities {
+  :root {
+    --background: 0, 0%, 7%;
+    --card: 0, 0%, 9%;
+    --border: 240, 3.7%, 15.9%;
+  }
 }

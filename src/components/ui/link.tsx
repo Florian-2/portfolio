@@ -9,7 +9,7 @@ export function Link(props: Props) {
 	return (
 		<NextLink
 			{...props}
-			className="p-2 flex justify-center items-center border rounded transition-colors hover:border-red-500"
+			className="p-2 flex justify-center items-center border rounded-sm transition-colors hover:border-red-500"
 			target="_blank"
 		>
 			{children}

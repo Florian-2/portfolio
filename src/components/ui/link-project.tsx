@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { IconExternalLink } from "../icons/external-link";
-import { cn } from "@/utils/utils";
 import { Project } from "@/interfaces/project";
 
 type Props = {
@@ -12,26 +10,15 @@ type Props = {
 };
 
 export function LinkProject({ project }: Props) {
-	const [isHovered, setIsHovered] = useState(false);
-
 	return (
-		<div
-			className="relative"
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
-		>
-			<div
-				className={cn(
-					"absolute z-10 rounded-lg bottom-[110%] left-1/2 -translate-x-1/2 translate-y-8 pointer-events-none min-w-[270px] overflow-hidden transition-all duration-200 opacity-0",
-					isHovered && "opacity-100 translate-y-0"
-				)}
-			>
+		<div className="relative group">
+			<div className="absolute z-10 rounded-lg bottom-[110%] left-1/2 -translate-x-1/2 translate-y-8 pointer-events-none min-w-[270px] overflow-hidden opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
 				<Image
 					src={project.src}
 					alt={project.title}
 					width={270}
 					height={200}
-					aria-hidden={isHovered}
+					aria-hidden="true"
 				/>
 			</div>
 
@@ -45,12 +32,7 @@ export function LinkProject({ project }: Props) {
 				<div className="text-sm flex justify-between items-center">
 					<span className="truncate">{project.languages.join(" • ")}</span>
 
-					<div
-						className={cn(
-							"transition-all duration-200 opacity-0 translate-y-8",
-							isHovered && "opacity-100 translate-y-0"
-						)}
-					>
+					<div className="transition-all duration-200 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0">
 						<IconExternalLink />
 					</div>
 				</div>
