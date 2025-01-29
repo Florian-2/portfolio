@@ -20,7 +20,7 @@ export function Card({ children, className }: Props) {
 	return (
 		<div
 			className={cn(
-				"p-4 sm:p-6 text-white bg-card rounded-lg border transition-all hover:border-red-500 opacity-0 translate-y-72 duration-300",
+				"p-4 sm:p-6 text-white bg-card rounded-lg border transition-transform duration-500 hover:border-red-500 opacity-0 translate-y-72 hover:transition-colors hover:duration-200",
 				className,
 				isMounted && "opacity-100 translate-y-0"
 			)}

@@ -25,8 +25,7 @@ export function AboutMe() {
 				</div>
 
 				<p className="text-md">
-					Au-delà de l'aspect technique, je suis passionné par le cinéma et les jeux vidéo, ce qui m'a
-					encouragé à devenir développeur.
+					Au-delà de l'aspect technique, je suis passionné par le cinéma et les jeux vidéo !
 				</p>
 			</div>
 		</Card>
